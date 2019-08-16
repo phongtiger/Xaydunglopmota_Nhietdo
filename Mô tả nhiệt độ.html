@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let Temperature = function (Celsius) {
+        this.Celsius = Celsius;
+        this.getCelsius = function () {
+            return this.Celsius;
+        };
+        this.setCelsius = function (Celsius) {
+            this.Celsius = Celsius;
+        };
+        this.toFahrenheit = function (Celsius) {
+            let f = 9/5*Celsius+32;
+            return document.write("Sang nhiet do Fahrenheit: " + f +"</br>");
+        };
+        this.toKelvin =function (Celsius) {
+            let k = Celsius + 273.15;
+            return document.write("Sang nhiet do Kelvin: " + k);
+        };
+
+    };
+    let Celsius1 = new Temperature(25);
+    Celsius = Celsius1.getCelsius();
+    Celsius1.toFahrenheit(25);
+    Celsius1.toKelvin(25);
+</script>
+</html>
